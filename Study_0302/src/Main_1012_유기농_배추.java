@@ -41,6 +41,8 @@ public class Main_1012_유기농_배추 {
 					}
 				}
 			}
+			
+			// 출력 
 			System.out.println(cnt);
 		}
 		
