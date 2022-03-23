@@ -9,6 +9,10 @@ import java.util.StringTokenizer;
 
 public class Main_17135_캐슬_디펜스3 {
 
+	/*
+	 * 메모리 55024
+	 * 시간 292
+	 */
 	static int[][] map, save;
 	static int[] p;
 	static int N, M, D, ans, cnt;
@@ -28,6 +32,7 @@ public class Main_17135_캐슬_디펜스3 {
 		ans = 0;
 		int temp = 0;
 		while (++temp <= 3) p[M - temp] = 1;
+		
 		// 입력
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
@@ -36,6 +41,7 @@ public class Main_17135_캐슬_디펜스3 {
 				save[i][j] = map[i][j];
 			}
 		}
+		
 		// 순열 생성 (궁수 위치)
 		do {
 			int line = N, attack = 0;

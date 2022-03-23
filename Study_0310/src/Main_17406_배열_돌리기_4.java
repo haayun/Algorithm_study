@@ -87,6 +87,7 @@ public class Main_17406_배열_돌리기_4 {
 
 			r += d[dir][0];
 			c += d[dir][1];
+			
 			if (r < sr || r > er || c < sc || c > ec) {
 				r = r - d[dir][0] + d[(dir + 1) % 4][0];
 				c = c - d[dir][1] + d[(dir + 1) % 4][1];
