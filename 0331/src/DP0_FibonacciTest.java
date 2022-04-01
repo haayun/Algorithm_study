@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DP0_FibonacciTest {
@@ -16,7 +17,8 @@ public class DP0_FibonacciTest {
 	public static long fibo2(int n) {
 		callCnt2[n]++;
 		totalCnt2++;
-		if (n >= 2 && memo[n] == 0) {
+//		if (n >= 2 && memo[n] == 0) {	// 메모 여부 확인
+		if(memo[n] == -1) {
 			memo[n] = fibo2(n - 1) + fibo2(n - 2);
 		}
 		return memo[n];
@@ -28,7 +30,8 @@ public class DP0_FibonacciTest {
 		int n = sc.nextInt();
 		callCnt1 = new long[n + 1];
 		callCnt2 = new long[n + 1];
-		memo = new long[n + 1];
+		memo = new long[n + 1];		// 0으로 자동 초기화
+		Arrays.fill(memo, -1);
 		memo[0] = 0;
 		memo[1] = 1;
 
