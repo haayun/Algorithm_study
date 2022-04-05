@@ -44,25 +44,3 @@ public class Solution_숫자문자열과_영단어 {
 	}
 
 }
-
-/*
-    public int solution(String s) {
-        init();
-		int answer = 0;
-		String temp = new String();
-		for(int i = 0; i < s.length(); i++) {
-			if(s.charAt(i) >= '1' && s.charAt(i) <= '9') {
-				answer = answer * 10 + Integer.parseInt(s.substring(i, i+1));
-			} else {
-				temp += s.charAt(i);
-			}
-			
-			if(map.containsKey(temp)) {
-				answer = answer * 10 + map.get(temp);
-				temp = new String();
-			}
-			
-		}
-		return answer;
-    }
-*/
