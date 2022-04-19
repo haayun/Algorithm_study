@@ -4,7 +4,7 @@ public class Solution_행렬_테두리_회전하기 {
 
 	public static void main(String[] args) {
 //		int[] result = solution(6,	6, new int[][]{{2,2,5,4},{3,3,6,6},{5,1,6,3}});
-		int[] result = solution(3,	6, new int[][]{{1, 1, 2, 2}});
+		int[] result = solution(3,	3, new int[][]{{1, 1, 2, 2},{1, 2, 2, 3},{2, 1, 3, 2}, {2, 2, 3, 3}});
 		
 		System.out.println(Arrays.toString(result));
 	}
@@ -18,7 +18,7 @@ public class Solution_행렬_테두리_회전하기 {
 		map = new int[rows + 1][columns + 1];
 		for (int i = 1; i <= rows; i++) {
 			for (int j = 1; j <= columns; j++)
-				map[i][j] = (i - 1) * rows + j;
+				map[i][j] = (i - 1) * columns + j;
 		}
 		for (int i = 0; i < queries.length; i++) {
 			answer[i] = rotate(queries[i][0], queries[i][1], queries[i][2], queries[i][3]);
