@@ -9,13 +9,13 @@ public class Main_20057_마법사_상어와_토네이도 {
 	static int[] dr = {0, 1, 0, -1};
 	static int[] dc = {-1, 0, 1, 0};
 	
-	// 하드코딩 그자체...^^
+	// 하드코딩 그자체...^^zzㅋㅋㅋㅋㅋ
 	static int[][][] spread = {{{-1, 1}, {1, 1}, {-2, 0}, {2, 0}, {-1, 0}, {1, 0}, {-1, -1}, {1, -1}, {0, -2}, {0, -1}},
 								{{-1, -1}, {-1, 1}, {0, -2}, {0, 2}, {0, -1}, {0, 1}, {1, -1}, {1, 1}, {2, 0}, {1, 0}},
 								{{-1, -1}, {1, -1}, {-2, 0}, {2, 0}, {-1, 0}, {1, 0}, {-1, 1}, {1, 1}, {0, 2}, {0, 1}},
 								{{1, -1}, {1, 1}, {0, -2}, {0, 2}, {0, -1}, {0, 1}, {-1, -1}, {-1, 1}, {-2, 0}, {-1, 0}}};
 	static int[] percentage = {1, 1, 2, 2, 7, 7, 10, 10, 5, 0};
-	static int p;
+	static int p;	// 비율 칸 개수
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
@@ -29,6 +29,7 @@ public class Main_20057_마법사_상어와_토네이도 {
 		}
 		int answer = 0;
 		int tr = N/2, tc = N/2;
+		// 달팽이처럼 회오리로 움직이기 
 		outer : for(int i = 1; i <= N; i++) {
 			int dir = 0;
 			if(i % 2 == 0) dir += 2; 
