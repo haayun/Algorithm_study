@@ -13,6 +13,7 @@ public class Main_1013_Contact {
 			String wave = br.readLine();
 			
 			boolean result = Pattern.matches(regExp, wave);
+			
 			if(result) {
 				System.out.println("YES");
 			} else {
